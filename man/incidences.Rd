@@ -1,15 +1,10 @@
-\name{incidences}
-\alias{incidences}
 \title{
 Incidences calculations.
-}
-\description{
+}\name{incidences}\alias{incidences}\description{
 A function to calculate incidence rates for every combination of age and calendar years. 
 }
-\usage{
-incidences(age_min, age_max, year_min, year_max, follow_up,
-start_age, start_year, case)
-}
+\usage{incidences(age_min, age_max, year_min, year_max, follow_up,
+start_age, start_year, case)}
 \arguments{
   \item{age_min}{
 The age at which incidences should begin to be calculated.
@@ -35,17 +30,12 @@ A vector of dimension \code{n} of calendar years at the begining of the follow-u
   \item{case}{
 A vector of dimension \code{n} where each component equals 1 if the follow-up ended because the individual was infected with the decease and 0 otherwise.
 }
-}
-\details{
+}\details{
 This function can be used to obtain incidences for the functions \code{est.expDeath}, \code{var.expDeath} and \code{inference.SMR}. A complete example of usage is provided in the help page of the \code{screening} dataset.
-}
-\value{
+}\value{
 A matrix whose first column is the number of person-years at risk, the second column is the calendar years, the third column is the ages and the fourth column is the incidence rates. 
-}
-\author{
+}\author{
 Denis Talbot, Thierry Duchesne, Jacques Brisson, Nathalie Vandal.
-}
-
-\seealso{
+}\seealso{
 \code{\link{est.expDeath}}, \code{\link{var.expDeath}}, \code{\link{inference.SMR}}, \code{\link{screening}}
 }

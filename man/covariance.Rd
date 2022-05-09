@@ -1,17 +1,11 @@
-\name{covariance}
-\alias{covariance}
-\keyword{internal}
 \title{
 Covariance between two survival probability estimates.
-}
-\description{
+}\name{covariance}\alias{covariance}\keyword{internal}\description{
 The function \code{covariance} calculates the covariance between two survival probabilty 
 obtained with a Cox proportional hazard model. Follow-up times and covariates
 may differ for the two survival probabilties. This is mostly an internal function, meant to be used by the function \code{var.expDeath}.
 }
-\usage{
-covariance(t_i, delta_i, beta, time1, z1, time2, z2, S0_i, S1_i, S02_i, Omega_1)
-}
+\usage{covariance(t_i, delta_i, beta, time1, z1, time2, z2, S0_i, S1_i, S02_i, Omega_1)}
 \arguments{
   \item{t_i}{
 All the follow up times.
@@ -46,22 +40,15 @@ Object described in Lin et al. (1994), slightly modified for computationnal effi
   \item{Omega_1}{
 Inverse of the asymptotic variance-covariance matrix of the estimated parameters of the Cox model. It is obtained with \code{function1}.
 }
-}
-\details{
+}\details{
 This function was built to be an internal function, only used by the function \code{var.expDeath}.
-}
-\value{
+}\value{
 The covariance between the two estimated survival probability.
-}
-\references{
+}\author{
+Denis Talbot, Thierry Duchesne, Jacques Brisson, Nathalie Vandal.
+}\references{
 Lin D.Y., Fleming T.R., Wei L.J. (1994) \emph{Confidence bands for survival curves under the proportional hazards model}, Biometrika, 81 (1): 73-81.
 
 Talbot, D., Duchesne, T., Brisson, J., Vandal, N. (2011) \emph{Variance estimation and confidence intervals for the standardized mortality ratio with application to the assessment of a cancer screening program}, Statistics in Medicine, 30, 3024-3037. 
-}
-\author{
-Denis Talbot, Thierry Duchesne, Jacques Brisson, Nathalie Vandal.
-}
-
-\seealso{
+}\seealso{
 \code{\link{var.expDeath}}, \code{\link{function1}}}
-

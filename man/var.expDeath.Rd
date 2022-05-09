@@ -1,15 +1,8 @@
-\name{var.expDeath}
-\alias{var.expDeath}
 \title{
 Variance estimation of the expected number of deaths
-}
-\description{
+}\name{var.expDeath}\alias{var.expDeath}\description{
 This function estimates the variance of the expected number of deaths when the latter is estimated using Sasieni's method.
-}
-\usage{
-var.expDeath(contribution, incid, cox, fuzz, Poisson = FALSE, covnames)
-}
-\arguments{
+}\usage{var.expDeath(contribution, incid, cox, fuzz, Poisson = FALSE, covnames)}\arguments{
   \item{contribution}{
 An object of contributions produced by the function \code{contrib}.
 }
@@ -31,20 +24,16 @@ An alphanumeric vector containing the names of the covariates used to estimate t
 \item{Poisson}{
 Indicates whether the incidences' variance should be estimated with a Poisson distribution (TRUE) or a binomial distribution (FALSE). The default is FALSE.
 }
-}
-\value{
-The function returns the variance of the expected number of deaths}
-\references{
-Talbot, D., Duchesne, T., Brisson, J., Vandal, N. (2011) \emph{Variance estimation and confidence intervals for the standardized mortality ratio with application to the assessment of a cancer screening program}, Statistics in Medicine, 30, 3024-3037. 
-}
-\author{
-Denis Talbot, Thierry Duchesne, Jacques Brisson, Nathalie Vandal.
-}
-\note{
+}\value{
+The function returns the variance of the expected number of deaths}\note{
 A complete example of how to use this function is available in the help page of the \code{screening} dataset.
-}
-
-\examples{
+}\author{
+Denis Talbot, Thierry Duchesne, Jacques Brisson, Nathalie Vandal.
+}\references{
+Talbot, D., Duchesne, T., Brisson, J., Vandal, N. (2011) \emph{Variance estimation and confidence intervals for the standardized mortality ratio with application to the assessment of a cancer screening program}, Statistics in Medicine, 30, 3024-3037. 
+}\seealso{
+\code{\link{est.expDeath}}, \code{\link{inference.SMR}}, \code{\link{screening}}
+}\examples{
 #This example uses pre-built objects and shows the simple usage
 #of the est.expDeath function when those objects already exists.
 #For an example of how to built those object, refer to the 
@@ -58,7 +47,4 @@ A complete example of how to use this function is available in the help page of 
 
 
 #[1,] 39.31382
-}
-\seealso{
-\code{\link{est.expDeath}}, \code{\link{inference.SMR}}, \code{\link{screening}}
 }

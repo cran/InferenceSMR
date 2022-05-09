@@ -1,11 +1,6 @@
-\name{req.objects}
-\keyword{internal}
-\alias{req.objects}
-\docType{data}
 \title{
 Required objects to run some examples
-}
-\description{
+}\name{req.objects}\alias{req.objects}\keyword{internal}\keyword{datasets}\description{
 Contains pre-built objects used to run some examples. Those items simplify some examples.
 }
 \usage{data(req.objects)}
@@ -13,7 +8,7 @@ Contains pre-built objects used to run some examples. Those items simplify some 
   The format is:
 List of 5
  $ contribution:List of 4
-  ..$ :'data.frame':	1022 obs. of  9 variables:
+  ..$ :'data.frame':    1022 obs. of  9 variables:
   .. ..$ Group.1: num [1:1022] 0 0.5 1 1.5 2 2.5 3 0 0.5 1 ...
   .. ..$ Group.2: num [1:1022] 3 3 3 3 3 3 3 4 4 4 ...
   .. ..$ Group.3: num [1:1022] 70 70 70 70 70 70 70 70 70 70 ...
@@ -78,7 +73,7 @@ List of 5
   ..$ call             : language coxph(formula = Surv(time = followONS, event = deathBC, type = "right") ~ year + age1 + age2 + age3 + age4, data = cox.data, control = coxph.control(iter.max = 100),      method = "breslow")
   ..- attr(*, "class")= chr "coxph"
  $ covnames    : chr [1:5] "year" "age1" "age2" "age3" ...
- $ cox.data    :'data.frame':	697 obs. of  7 variables:
+ $ cox.data    :'data.frame':   697 obs. of  7 variables:
   ..$ followONS: num [1:697] 0.796 3.467 3.769 5.568 2.046 ...
   ..$ deathBC  : num [1:697] 0 0 0 0 0 1 0 0 0 0 ...
   ..$ year     : num [1:697] 0 1 1 1 0 1 0 0 1 1 ...
@@ -87,4 +82,3 @@ List of 5
   ..$ age3     : num [1:697] 0 0 1 0 0 0 0 1 0 1 ...
   ..$ age4     : num [1:697] 0 0 0 0 1 0 0 0 0 0 ...
 }
-\keyword{datasets}

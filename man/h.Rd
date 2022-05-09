@@ -1,15 +1,9 @@
-\name{h}
-\alias{h}
-\keyword{internal}
 \title{
 h function as defined by Lin et al. (1994).
-}
-\description{
+}\name{h}\alias{h}\keyword{internal}\description{
 An internal function meant only to be used by the \code{covariance} function.
 }
-\usage{
-h(t_i, delta_i, beta, time, z, S0_i, S1_i)
-}
+\usage{h(t_i, delta_i, beta, time, z, S0_i, S1_i)}
 \arguments{
   \item{t_i}{
 The follow up times.
@@ -31,20 +25,14 @@ Object described in Lin et al. (1994), slightly modified for computationnal effi
   \item{S1_i}{
 Object described in Lin et al. (1994), slightly modified for computationnal efficiency. It is obtained with \code{function1}.
 }
-}
-\details{
+}\details{
 This is an internal function, only meant to be used by the \code{covariance} function.
-}
-\value{
+}\value{
 A numeric value described in Lin et al. (1994).
-}
-\references{
-Lin D.Y., Fleming T.R., Wei L.J. (1994) \emph{Confidence bands for survival curves under the proportional hazards model}, Biometrika, 81 (1): 73-81.
-}
-\author{
+}\author{
 Denis Talbot, Thierry Duchense, Jacques Brisson, Nathalie Vandal.
-}
-
-\seealso{
+}\references{
+Lin D.Y., Fleming T.R., Wei L.J. (1994) \emph{Confidence bands for survival curves under the proportional hazards model}, Biometrika, 81 (1): 73-81.
+}\seealso{
 \code{\link{covariance}}
 }

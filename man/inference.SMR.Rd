@@ -1,14 +1,9 @@
-\name{inference.SMR}
-\alias{inference.SMR}
 \title{
-Inference about the standardized mortality ratio (SMR) when evaltuating the effect of a screening program on survival.}
-\description{
+Inference about the standardized mortality ratio (SMR) when evaltuating the effect of a screening program on survival.}\name{inference.SMR}\alias{inference.SMR}\description{
 This function estimates the expected number of deaths, its variance, the SMR and confidence intervals about the SMR.
 }
-\usage{
-inference.SMR(obs.death, normal = "log-smr", alpha = 0.05, contribution,
-incid, cox, fuzz = 0.01, Poisson = FALSE, covnames)
-}
+\usage{inference.SMR(obs.death, normal = "log-smr", alpha = 0.05, contribution,
+incid, cox, fuzz = 0.01, Poisson = FALSE, covnames)}
 \arguments{
   \item{obs.death}{
 The observed number of deaths for the people participating in the screening program. A numeric value.
@@ -17,7 +12,7 @@ The observed number of deaths for the people participating in the screening prog
 Indicates at which level should the normality assumption be made, either at the SMR level, at the log-SMR level or at the root-SMR level. A character vector containing one or many of the following elements ``smr'', ``log-smr'' and ``root-smr''.
 }
   \item{alpha}{
-The nominal error rate of the confidence intervals. A numeric value between 0 and 1, e.g. 0.05 to obtain a 95 \% confidence interval.
+The nominal error rate of the confidence intervals. A numeric value between 0 and 1, e.g. 0.05 to obtain a 95 % confidence interval.
 }
   \item{contribution}{
 An object of contributions produced by the function \code{contrib}.
@@ -39,11 +34,9 @@ Indicates whether the incidences' variance should be estimated with a Poisson di
   \item{covnames}{
 An alphanumeric vector containing the names of the covariates used to estimate the survival in the cohort of non-participants, that is, the names of the covariates used to obtain the \code{cox} object.
 }
-}
-\details{
+}\details{
 The \code{inference.SMR} function estimates the expected number of deaths as in Sasieni (2003), estimates the variance of the expected number of deaths and builds confidence intervals as in Talbot et al. (2011). As suggested in the latter, the variance of the observed number of deaths is estimated by the observed number of deaths.
-}
-\value{
+}\value{
 \item{expected}{The expected number of deaths}
 \item{obs.death}{The observed number of deaths}
 \item{variance}{The variance of the expected number of deaths}
@@ -54,21 +47,18 @@ The \code{inference.SMR} function estimates the expected number of deaths as in 
 \item{logSMR.ci}{A 1-\code{alpha} confidence interval for the log-SMR. Only returned if ``log-smr'' was given in the \code{normal} argument.}
 \item{rootSMR.var}{The variance of the square root of the SMR. Only returned if ``root-smr'' was given in the \code{normal} argument.}
 \item{rootSMR.ci}{A 1-\code{alpha} confidence interval for the root-SMR. Only returned if ``root-smr'' was given in the \code{normal} argument.}
-}
-\references{
+}\note{
+A complete example of usage is provided in the help page of the \code{screening} dataset.
+}\author{
+Denis Talbot, Thierry Duchesne, Jacques Brisson, Nathalie Vandal.
+}\references{
 Sasieni P. (2003) \emph{On the expected number of cancer deaths during follow-up of an initially cancer-free cohort}.
 Epidemiology, 14, 108-110.
 
 Talbot, D., Duchesne, T., Brisson, J., Vandal, N. (2011) \emph{Variance estimation and confidence intervals for the standardized mortality ratio with application to the assessment of a cancer screening program}, Statistics in Medicine, 30, 3024-3037. 
-}
-\author{
-Denis Talbot, Thierry Duchesne, Jacques Brisson, Nathalie Vandal.
-}
-\note{
-A complete example of usage is provided in the help page of the \code{screening} dataset.
-}
-
-\examples{
+}\seealso{
+\code{\link{est.expDeath}}, \code{\link{var.expDeath}}, \code{\link{screening}}
+}\examples{
 #This example uses pre-built objects and shows the simple usage
 #of the est.expDeath function when those objects already exist.
 #For an example of how to build those objects, refer to the 
@@ -137,7 +127,3 @@ A complete example of usage is provided in the help page of the \code{screening}
 
 
 }
-\seealso{
-\code{\link{est.expDeath}}, \code{\link{var.expDeath}}, \code{\link{screening}}
-}
-

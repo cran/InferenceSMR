@@ -1,1 +1,5 @@
 exportPattern("^[[:alpha:]]+")
+importFrom("survival", "survfit", "coxph.detail")
+importFrom("stats", "aggregate", "approx", "qnorm")
+importFrom("methods", "is")
+

@@ -1,14 +1,9 @@
-\name{est.expDeath}
-\alias{est.expDeath}
 \title{
 Estimation of the expected number of deaths.
-}
-\description{
+}\name{est.expDeath}\alias{est.expDeath}\description{
 Estimation of the expected number of deaths in a screening program using the method proposed by Sasieni (2003). 
 }
-\usage{
-est.expDeath(contribution, incid, cox, fuzz, covnames)
-}
+\usage{est.expDeath(contribution, incid, cox, fuzz, covnames)}
 \arguments{
   \item{contribution}{
 An object of contributions produced by the function \code{contrib}.
@@ -27,22 +22,17 @@ positive number, for instance 0.0001.
   \item{covnames}{
 An alphanumeric vector containing the names of the covariates used to estimate the survival in the cohort of non-participants, that is, the names of the covariates used to obtain the \code{cox} object.
 }
-}
-
-\value{
-Returns the expected number of deaths}
-\references{
+}\value{
+Returns the expected number of deaths}\note{
+A complete example of usage is provided in the help page of the \code{screening} dataset.
+}\author{
+Denis Talbot, Thierry Duchesne, Jacques Brisson, Nathalie Vandal.
+}\references{
 Sasieni P. (2003) \emph{On the expected number of cancer deaths during follow-up of an initially cancer-free cohort}.
 Epidemiology, 14, 108-110.
-}
-\author{
-Denis Talbot, Thierry Duchesne, Jacques Brisson, Nathalie Vandal.
-}
-\note{
-A complete example of usage is provided in the help page of the \code{screening} dataset.
-}
-
-\examples{
+}\seealso{
+\code{\link{var.expDeath}},\code{\link{inference.SMR}}, \code{\link{screening}}
+}\examples{
 #This example uses pre-built objects and shows the simple usage
 #of the est.expDeath function when those objects already exists.
 #For an example of how to built those object, refer to the 
@@ -56,8 +46,4 @@ cox.data = req.objects$cox.data;
 
 #[1] 33.44264
 
-}
-
-\seealso{
-\code{\link{var.expDeath}},\code{\link{inference.SMR}}, \code{\link{screening}}
 }
